@@ -1,0 +1,23 @@
+group 'testWar'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+war {
+    baseName = 'ROOT'
+    version =  ''
+    // adds a file-set to the WEB-INF dir.
+
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina
+    compile group: 'org.apache.tomcat', name: 'tomcat-catalina', version: '8.5.16'
+}
